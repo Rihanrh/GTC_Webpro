@@ -117,5 +117,32 @@ body {
 
 .table{
   font-size: 20px;
+  width: 20%;
+  height: 30%;
+  
+}
+.mt-5 {
+  margin-top: 5 !important;
+}
+.mx-5{
+  margin-left: 5 !important;
+  margin-right: 5 !important;
+}
+.table-danger{
+  background-color: rgba(234, 98, 98, 1) !important;
+  color: white !important;
+  text-align: center;
+}
+.mb-5{
+  margin-bottom: 0 !important;
+}
+.menu{
+  width: 75% !important;
+  height: 100% !important;
 }
 
+
+button:hover {
+  background-color: rgba(246, 49, 57, 1) !important;
+  /* You can change 'black' to any other color you prefer. */
+}
