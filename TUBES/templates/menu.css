@@ -117,8 +117,6 @@ body {
 
 .table{
   font-size: 20px;
-  width: 20%;
-  height: 30%;
   
 }
 .mt-5 {
@@ -137,12 +135,96 @@ body {
   margin-bottom: 0 !important;
 }
 .menu{
-  width: 75% !important;
-  height: 100% !important;
+  width: 80vw!important;
+  height: 100vh!important;
+  
 }
 
 
-button:hover {
+
+#buttonTambahMenu:hover {
   background-color: rgba(246, 49, 57, 1) !important;
-  /* You can change 'black' to any other color you prefer. */
+  
 }
+
+.popup{
+  
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  
+}
+
+.popup-content{
+  height: 530px;
+  width: 900px;
+  background:rgba(252, 255, 255, 1);
+  padding-left: 50px;
+  padding-top: 20px;
+  border-radius: 5 px;
+  position: relative; 
+  left: -10%; 
+
+}
+
+.col-form-label{
+  font-size: 20px !important;
+}
+
+
+.form-control {
+  width: 400px !important;
+}
+
+.close{
+  position: absolute;
+  top : -15px ;
+  right : -15px ;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+#buttonSunting:hover{
+  background-color: rgba(246, 49, 57, 1) !important;
+  color: white !important;
+  border: none !important;
+}
+
+#buttonHapus:hover{
+  background-color: rgba(246, 49, 57, 1) !important;
+}
+
+.popupSunting{
+  
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  
+}
+
+#buttonTambahkan:hover{
+  background-color: white !important;
+  color:rgba(246, 49, 57, 1) !important;
+  border: 1px solid rgba(246, 49, 57, 1)  !important ;
+}
+
+#buttonSuntingUbah:hover{
+  background-color: white !important;
+  color:rgba(246, 49, 57, 1) !important;
+  border: 1px solid rgba(246, 49, 57, 1)  !important ;
+}
+
+

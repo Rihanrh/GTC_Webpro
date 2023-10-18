@@ -4,8 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Menu</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="menu.css">
-    <script src="menu.js"></script>
+
+    
+
+    <!-- JS DATATABLE-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -13,22 +23,17 @@
   <body>
     <main>
       <h1 class="visually-hidden">Sidebars examples</h1>
-    
-      <!--Nambahin  background-color: rgba(211, 36, 43, 1);, aslinya tadi : 
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;"> -->
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 260px; ; background-color: rgba(211, 36, 43, 1); height: 100vh ;">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-        </a>
-        
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 260px; ; background-color: rgba(211, 36, 43, 1); height: 100vh ;"><a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"></a>
         <ul class="nav nav-pills flex-column mb-auto">
+
           <li class="nav-item">
             <a href="#" class="nav-link ">
-                <!--Custom font icon size-->
                 <i class="bi bi-receipt" style="font-size: 2rem;" ></i>
               <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-receipt"/></svg>
               Pesanan
             </a>
           </li>
+
           <li>
             <a href="#" class="nav-link text-white">
                 <i class="bi bi-cup-straw"  style="font-size: 2rem;"></i>
@@ -36,6 +41,7 @@
               Menu
             </a>
           </li>
+
           <li>
             <a href="#" class="nav-link text-white">
                 <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
@@ -43,8 +49,10 @@
               Laporan
             </a>
           </li>
+
         </ul>
         <hr>
+
     <div class="dropdown">
       <a href="#Syalala" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="assets/pp kasir.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
@@ -58,13 +66,16 @@
   
   
   <div class="menu">
-    <table class ="table mt-5 mx-5 table-bordered" >
+    <a href="#" class ="btn  mx-5 mt-3" id ="buttonTambahMenu" style="background-color: rgba(211, 36, 43, 1); color: white;"><i class="bi bi-plus-circle"></i>      Tambah Menu</a>
+    
+    <table class ="table  mx-5  mt-4 table-bordered" >
       <thead>
+
         <tr>
           <td class="table-danger">Nama Produk</td>
           <td class="table-danger">Harga</td>
           <td class="table-danger">Stok</td>
-          
+          <td class="table-danger">Sunting / Hapus </td>
         </tr>
       </thead>
   
@@ -73,37 +84,117 @@
           <td><img src="assets/awua.png" alt=""width="10%" >Aqua 600 mL</td>
           <td>Rp32.000</td>
           <td>99</td>
-        </tr>
-
-        <tr>
-          <td><img src="assets/awua.png" alt=""width="10%" >Aqua 600 mL</td>
-          <td>Rp32.000</td>
-          <td>99</td>
-        </tr>
-
-        <tr>
-          <td><img src="assets/awua.png" alt=""width="10%" >Aqua 600 mL</td>
-          <td>Rp32.000</td>
-          <td>99</td>
-        </tr>
-        <tr>
-          <td><img src="assets/awua.png" alt=""width="10%" >Aqua 600 mL</td>
-          <td>Rp32.000</td>
-          <td>99</td>
-        </tr>
-        
+          <td>
+            <div class="col-auto  align-items-center" style="margin-left: 25%;">
+              <a href="#" class ="btn  mb-0" id ="buttonSunting" style="background-color: white; color: rgba(211, 36, 43, 1); border: 1px solid rgba(211, 36, 43, 1);">Sunting</a>
+              <button type="button" class="btn mb-0 "id="buttonHapus" style="background-color:rgba(211, 36, 43, 1); color: white;">Hapus</button>
+            </div>
+          </td>
+        </tr>  
       </tbody>
-    </table>
-    <button type="button" class="btn  mx-5 mt-5 mb-5" style="background-color: rgba(211, 36, 43, 1); color: white;"><i class="bi bi-plus-circle"></i>      Tambah Menu</button>
 
+    </table>
+
+    <div class = "popup">
+      <div class="popup-content ms-5">
+        <form>
+          <img src="assets/close.png"  class="close">
+          <legend  style="color: rgba(211, 36, 43, 1); font-weight: bold; margin-top: 2px; ">Tambah Menu</legend>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5 ">
+              <label for="fotoProduk" class="col-form-label">Foto Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="file" id="_fotoProduk" class="form-control"  name="img" accept="image/*">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="namaProduk" class="col-form-label">Nama Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_namaProduk" class="form-control">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="hargaProduk" class="col-form-label">Harga Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_hargaProduk" class="form-control">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="stokProduk" class="col-form-label">Stok Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_Stok" class="form-control">
+            </div>
+          </div>
+
+          <button type="button" class="btn mb-0 " id="buttonTambahkan" style="background-color:rgba(211, 36, 43, 1); color: white; margin-left: 80%;">Tambahkan</button>
+        </form>
+      </div>
+    </div>
+
+    <div class = "popupSunting">
+      <div class="popup-content ms-5">
+        <form>
+          <img src="assets/close.png"  class="close" id="closeSunting">
+          <legend  style="color: rgba(211, 36, 43, 1); font-weight: bold; margin-top: 2px; ">Sunting Menu</legend>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5 ">
+              <label for="fotoProduk" class="col-form-label">Foto Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="file" id="_fotoProduk" class="form-control"  name="img" accept="image/*">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="namaProduk" class="col-form-label">Nama Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_namaProduk" class="form-control"  value ="Aqua 600 mL">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="hargaProduk" class="col-form-label">Harga Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_hargaProduk" class="form-control" value="Rp32.000">
+            </div>
+          </div>
+
+          <div class="row g-3 align-items-center">
+            <div class="col-auto mb-5">
+              <label for="stokProduk" class="col-form-label">Stok Produk</label>
+            </div>
+            <div class="col-auto mb-5">
+              <input type="text" id="_Stok" class="form-control"  value="99">
+            </div>
+          </div>
+
+          <button type="button" class="btn mb-0 " id="buttonSuntingUbah" style="background-color:rgba(211, 36, 43, 1); color: white; margin-left: 80%; width: 140px;">Sunting</button>
+        </form>
+      </div>
+    </div>
+  
   </div>
 
-  
-  
-
     </main>    
+        <script src="menu.js"></script>
         <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
         <script src="sidebars.js"></script>
       </body>
+
 </html>
