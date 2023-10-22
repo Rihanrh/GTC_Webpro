@@ -228,3 +228,7 @@ body {
 }
 
 
+#custom-container {
+    margin-right: 330px; /* Adjust this value based on your sidebar width */
+}
+
