@@ -123,10 +123,9 @@
     <!--Date Range Picker Script-->
     <script>
         $(function() {
-            // Initialize the date range picker with a custom placeholder and date format
             $('input[name="daterange"]').daterangepicker({
                 opens: 'left',
-                showDropdowns: true, // Show month and year dropdowns
+                showDropdowns: true,
                 ranges: {
                     'Last 7 Days': [moment().subtract(7, 'days'), moment()],
                     'Last 30 Days': [moment().subtract(30, 'days'), moment()],
@@ -146,7 +145,6 @@
                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
             });
     
-            // Set the input field's value to an empty string
             $('input[name="daterange"]').val('');
         });
     </script>
