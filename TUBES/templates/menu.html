@@ -25,7 +25,7 @@
         background-color: rgba(246, 49, 57, 1) !important;
       }
 
-      .popup{
+      .popupAdd{
           
         background: rgba(0, 0, 0, 0.4);
         width: 100%;
@@ -104,6 +104,30 @@
         color:rgba(246, 49, 57, 1) !important;
         border: 1px solid rgba(246, 49, 57, 1)  !important ;
       }
+
+      .popupDelete{
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+      }
+
+      .popupDeleteContent{
+        height: 300px;
+        width: 700px;
+        background:rgba(252, 255, 255, 1);
+        border-radius: 5 px;
+        position: relative; 
+        left: -10%; 
+      }
+
+      #b
 
     </style>
 
@@ -189,7 +213,7 @@
           </table>
 
           <!--Popup Tambah Menu-->
-          <div class = "popup">
+          <div class = "popupAdd">
             <div class="popup-content ms-5">
               <form>
                 <img src="assets/close.png"  class="close">
@@ -268,9 +292,23 @@
               </form>
             </div>
           </div>
-        
-        </div>
+
+          <div class="popupDelete pt-2">
+            <div class="popupDeleteContent ">
+
+              <i class="bi bi-exclamation-circle" style="color: rgba(211, 36, 43, 1) ; font-size: 120px;"></i>
+              <p style="font-weight: bold;">Apakah Anda Yakin Ingin Menghapus Barang Ini ?</p>
+
+              
+
+              <button type="button" class="btn mb-0 " id="buttonYes" style="background-color:rgba(211, 36, 43, 1); color: white;  width: 140px;">Ya</button>
+              <button type="button" class="btn mb-0 " id="buttonNo" style="background-color:rgba(211, 211, 211, 1); color: white;  width: 140px;">Batal</button>
+
             </div>
+          </div>
+        </div>
+      </div>
+    
 
     </main>    
         <script src="kasir.js"></script>
