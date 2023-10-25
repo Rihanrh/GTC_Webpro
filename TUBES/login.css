@@ -1,0 +1,67 @@
+/* Apply a linear gradient background */
+body {
+    background: linear-gradient(172deg, #D3242B 6.28%, #F1474D 42.26%, #F24F55 60.55%, #F67579 79.75%, #FFF 106.15%);
+    margin: 0; /* Remove default body margin to ensure the container takes up the full width */
+    font-family: Poppins;
+}
+
+/* Center the login container on the page and style it */
+.container-login {
+    width: 53.4%; /* Take up half of the screen width */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white background */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the top (left side) */
+    height: 100vh; /* Center vertically in the viewport */
+    box-sizing: border-box;
+}
+
+/* Style the input boxes for username/email and password */
+.input-box {
+    width: 629.182px;
+    height: 91.138px;
+    flex-shrink: 0;
+    border: 20px;
+    border-radius: 20px;
+    margin: 3.7%;
+    padding: 10px;
+}
+
+/* Style the login button */
+.login-button {
+    width: 628.62743px;
+    height: 107.708px;
+    margin: 10px;
+    margin-top: 13%;
+    border: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    background: #D3242B;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Hover effect for the login button */
+.login-button:hover {
+    background: #F1474D;
+}
+
+.heading-text{
+    text-align: left;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
+
+/*.form-control{
+    width: 629.182px;
+    height: 91.138px;
+    flex-shrink: 0;
+    border: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+*/
