@@ -5,13 +5,13 @@
 
 /* Nambahin font family + !important biar replace font bs */
 body {
-  background-color:  rgba(255, 255, 255, 1)!important;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    font-family:  'Poppins', sans-serif !important;
-    font-size: 24px !important;
-    
-  }
+  background-color:  rgba(255, 255, 255, 1);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  font-family:  'Poppins', sans-serif !important;
+  font-size: 24px !important;
+  
+}
   
   html {
     height: -webkit-fill-available;
@@ -225,6 +225,14 @@ body {
   background-color: white !important;
   color:rgba(246, 49, 57, 1) !important;
   border: 1px solid rgba(246, 49, 57, 1)  !important ;
+}
+
+/* landing page */
+.bg-landingpage{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(180deg, #F72B32 0%, #F1474D 22.51%, #F67579 54.8%, #FFF 100%);
+
 }
 
 
