@@ -305,9 +305,33 @@
             </div>
           </div>
         </div>
+
       </div>
     
 
+      <script>
+        document.getElementById("buttonTambahMenu").addEventListener("click", function () {
+          document.querySelector(".popupAdd").style.display = "flex";
+        });
+        
+        document.querySelector(".close").addEventListener("click", function () {
+          document.querySelector(".popupAdd").style.display = "none";
+        });
+        
+        document.getElementById("buttonSunting").addEventListener("click", function () {
+          document.querySelector(".popupSunting").style.display = "flex";
+        });
+        
+        document.querySelector("#closeSunting").addEventListener("click", function () {
+          document.querySelector(".popupSunting").style.display = "none";
+        });
+        document.getElementById("buttonHapus").addEventListener("click", function () {
+          document.querySelector(".popupDelete").style.display = "flex";
+        });
+        document.getElementById("buttonNo").addEventListener("click", function () {
+          document.querySelector(".popupDelete").style.display = "none";
+        });
+      </script>
     </main>    
         <script src="kasir.js"></script>
         <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
