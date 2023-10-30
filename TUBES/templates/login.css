@@ -1,43 +1,83 @@
 /* Apply a linear gradient background */
 body {
     background: linear-gradient(172deg, #D3242B 6.28%, #F1474D 42.26%, #F24F55 60.55%, #F67579 79.75%, #FFF 106.15%);
-    margin: 0; /* Remove default body margin to ensure the container takes up the full width */
+    margin: 0; 
     font-family: Poppins;
 }
 
 /* Center the login container on the page and style it */
 .container-login {
-    width: 53.4%; /* Take up half of the screen width */
+    width: 50%;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Align to the top (left side) */
-    height: 100vh; /* Center vertically in the viewport */
+    justify-content: flex-start;
+    height: 100vh;
     box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+
+.image-container {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    position: relative;
+    overflow: hidden; /* Hide any overflowing image */
+    display: flex; /* Add flex display */
+    flex-direction: column;/* Adjust to stack text on top of the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+.img-fluid {
+    width: 70%; /* Make the image container width 100% */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+}
+
+/* Add the text above the image */
+.above-image-text {
+    text-align: center;
+    color: rgba(251, 251, 253, 0.97);
+    font-family: Poppins;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 54.875px;
+    letter-spacing: 2.4px;
+    margin-top: 20px; /* Adjust the margin to create some space */
+}
+.sub-heading {
+    font-size: 40px;
+    line-height: 54.875px;
+    letter-spacing: 2.4px;
+    text-align: center; /* Center the text */
 }
 
 /* Style the input boxes for username/email and password */
-.input-box {
-    width: 629.182px;
-    height: 91.138px;
-    flex-shrink: 0;
-    border: 20px;
+.form-control-lg {
+    width: 100%; /* Adjust this value based on your needs */
+    max-width: 629.182px; /* Set a maximum width to avoid over-expansion on larger screens */
+    height: 90;
+    border: none;
+    background-color: #F7F7F7;
     border-radius: 20px;
-    margin: 3.7%;
-    padding: 10px;
+    margin-bottom: 15%; /* Reduce margin for responsiveness */
+    padding: 20px;
+    font-size: 20px;
 }
+
 
 /* Style the login button */
 .login-button {
-    width: 628.62743px;
-    height: 107.708px;
-    margin: 10px;
-    margin-top: 13%;
-    border: 20px;
+    width: 100%; /* Adjust this value based on your needs */
+    max-width: 629.182px; /* Set a maximum width to avoid over-expansion on larger screens */
+    height: 90px;
+    margin-top: 20%; /* Reduce margin for responsiveness */
+    border: none;
     border-radius: 20px;
-    padding: 10px;
+    padding: 20px;
     background: #D3242B;
     color: #fff;
     cursor: pointer;
@@ -55,12 +95,3 @@ body {
     margin-bottom: 10%;
 }
 
-/*.form-control{
-    width: 629.182px;
-    height: 91.138px;
-    flex-shrink: 0;
-    border: 20px;
-    border-radius: 20px;
-    padding: 10px;
-}
-*/
