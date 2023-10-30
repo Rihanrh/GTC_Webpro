@@ -135,7 +135,14 @@ main {
   font-size: 20px !important;
 }
 
+
 /* Container Untuk Report */
 #custom-container {
   margin-right: 330px; 
+
+.bg-landingpage{
+  height: 100vh;
+  width: 100%;
+  background-image: url(assets/desktoplandingpage.png);
+  font-family:'Poppins', sans-serif !important;
 }
