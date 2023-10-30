@@ -1,3 +1,6 @@
+/*Import poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* Apply a linear gradient background */
 body {
     background: linear-gradient(172deg, #D3242B 6.28%, #F1474D 42.26%, #F24F55 60.55%, #F67579 79.75%, #FFF 106.15%);
@@ -24,15 +27,16 @@ body {
     height: 100vh;
     float: right;
     position: relative;
-    overflow: hidden; /* Hide any overflowing image */
-    display: flex; /* Add flex display */
-    flex-direction: column;/* Adjust to stack text on top of the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
 }
+
 .img-fluid {
-    width: 70%; /* Make the image container width 100% */
-    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    width: 70%; 
+    height: auto; 
 }
 
 /* Add the text above the image */
@@ -45,18 +49,18 @@ body {
     font-weight: 700;
     line-height: 54.875px;
     letter-spacing: 2.4px;
-    /*margin-top: 20px; /* Adjust the margin to create some space */
+
 }
 .sub-heading {
     font-size: 40px;
     line-height: 54.875px;
     letter-spacing: 2.4px;
-    text-align: center; /* Center the text */
+    text-align: center;
 }
 
 /* Style the input boxes for username/email and password */
 .form-control-lg {  
-    width: 90%; /* Adjust this value based on your needs */
+    width: 90%; 
     height: 90;
     border: none;
     background-color: #F7F7F7;
@@ -68,7 +72,7 @@ body {
 
 /* Style the login button */
 .login-button {
-    width: 90%; /* Adjust this value based on your needs */
+    width: 90%; 
     height: 90px;
     border: none;
     border-radius: 20px;
@@ -93,3 +97,18 @@ body {
     text-align: left;
 }
 
+/* Style the password input container */
+.password-input {
+    position: relative; 
+    margin-right: 5px; 
+    padding-right: 30px; 
+}
+
+/* Style the password toggle icon */
+.password-toggle {
+    position: absolute;
+    top: 50%; 
+    right: 5px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+}
