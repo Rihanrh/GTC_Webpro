@@ -134,3 +134,8 @@ main {
   text-align: center;
   font-size: 20px !important;
 }
+
+/* Container Untuk Report */
+#custom-container {
+  margin-right: 330px; 
+}
