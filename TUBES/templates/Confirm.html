@@ -64,71 +64,67 @@
 
         <!--Sidebar-->
         <div class="d-flex flex-column flex-shrink-0 p-3 text-white " style="width: 260px; ; background-color: rgba(211, 36, 43, 1); height: 100vh ;">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"></a>
-          <ul class="nav nav-pills flex-column mb-auto">
-            <li>
-              <a href="#" class="nav-link ">
-                  <i class="bi bi-receipt" style="font-size: 2rem;" ></i>
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-receipt"/></svg>
-                Pesanan
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="nav-link text-white">
-                  <i class="bi bi-cup-straw"  style="font-size: 2rem;"></i>
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                Menu
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="nav-link text-white">
-                  <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                Laporan
-              </a>
-            </li>
-
-          </ul>
-          <hr>
-        
-          <!--Dropdown-->
-          <div class="dropdown">
-            <a href="#Syalala" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="assets/pp kasir.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-              <strong>Syalala</strong>
-            </a>
-            <ul class="dropdown-menu  text-small shadow" aria-labelledby="dropdownUser1">
-              <li><a class="dropdown-item" href="#">Keluar</a></li>
-          </ul>
-          </div>
-        </div> 
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"></a>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="Confirm.html" class="nav-link">
+                        <i class="bi bi-receipt" style="font-size: 2rem;"></i>
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#bi bi-receipt"/></svg>
+                        Pesanan
+                    </a>
+                </li>
+                <li>
+                    <a href="menu.html" class="nav-link text-white">
+                        <i class="bi bi-cup-straw" style="font-size: 2rem;"></i>
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                        Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="report.html" class="nav-link text-white">
+                        <i class="bi bi-journal-text" style="font-size: 2rem;"></i>
+                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                        Laporan
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#Syalala" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/pp kasir.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>Syalala</strong>
+                </a>
+                <ul class="dropdown-menu  text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">Keluar</a></li>
+                </ul>
+            </div>
+        </div>
       </div>
 
-<div class="container mb-2" style="height: 100vh;">
-    <div class="card bg-light-subtle mt-4">
-      <img src="C:\Kuliah\Semester 5\WebPro\GTC_Webpro\TUBES\templates\assets\Nasi Goreng.jpg" class="card-img-top">
-      <div class="card-body">
-        <div class="text-section">
-            <h5 class="card-title">Nasi Goreng</h5>
-            <p class="card-text">ID Pesanan: ABC1234</p>
-            <p class="card-text">Kolor Basecamp</p>
+    <div class="container mb-2" style="height: 100vh; margin: 0;">
+        <div class="card bg-light-subtle mt-4">
+          <img src="assets\Nasi Goreng.jpg" class="card-img-top">
+          <div class="card-body">
+            <div class="text-section">
+                <h5 class="card-title">Nasi Goreng</h5>
+                <p class="card-text">ID Pesanan: ABC1234</p>
+                <p class="card-text">Kolor Basecamp</p>
+            </div>
+            <div class="cta-section">
+              <div>Rp 15,000</div>
+                <button class="btn btn-danger" style="color: white;" id="butt">Konfirmasi Pemabayaran</button>
+            </div>
+          </div>
         </div>
-        <div class="cta-section">
-          <div>Rp 15,000</div>
-            <button class="btn btn-danger" style="color: white;" id="butt">Konfirmasi Pemabayaran</button>
-        </div>
-      </div>
-    </div>
 
-    <div class="popupConfirm pt-2">
-        <div class="popupConfirmContent ">
+        <div class="popupConfirm pt-2">
+            <div class="popupConfirmContent ">
 
-          <i class="bi bi-exclamation-circle" style="color: rgba(211, 36, 43, 1) ; font-size: 120px;"></i>
-          <p style="font-weight: bold;">Pesanan berhasil Dikonfirmasi</p>
-          <button type="button" class="btn mb-0 " id="buttonYes" style="background-color:rgba(211, 36, 43, 1); color: white;  width: 140px;">Ya</button>
+              <i class="bi bi-exclamation-circle" style="color: rgba(211, 36, 43, 1) ; font-size: 120px;"></i>
+              <p style="font-weight: bold;">Pesanan berhasil Dikonfirmasi</p>
+              <button type="button" class="btn mb-0 " id="buttonYes" style="background-color:rgba(211, 36, 43, 1); color: white;  width: 140px;">Ya</button>
 
+            </div>
         </div>
     </div>
 
@@ -140,4 +136,6 @@
         document.querySelector(".popupConfirm").style.display = "none";
         });
     </script>
-    
+
+</body>
+</html>

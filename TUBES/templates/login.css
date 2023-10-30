@@ -1,3 +1,7 @@
+/*Import poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 /* Apply a linear gradient background */
 body {
     background: linear-gradient(172deg, #D3242B 6.28%, #F1474D 42.26%, #F24F55 60.55%, #F67579 79.75%, #FFF 106.15%);
@@ -56,7 +60,7 @@ body {
 
 /* Style the input boxes for username/email and password */
 .form-control-lg {  
-    width: 90%; /* Adjust this value based on your needs */
+    width: 90%; 
     height: 90;
     border: none;
     background-color: #F7F7F7;
@@ -67,8 +71,8 @@ body {
 
 
 /* Style the login button */
-.login-button {
-    width: 90%; /* Adjust this value based on your needs */
+.login-button, .anchor-button {
+    width: 90%; 
     height: 90px;
     border: none;
     border-radius: 20px;
@@ -78,7 +82,13 @@ body {
     cursor: pointer;
     font-size: 24px;
     margin-left: 5%;
+    text-align: center; 
+    text-decoration: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
+
 
 /* Hover effect for the login button */
 .login-button:hover {
