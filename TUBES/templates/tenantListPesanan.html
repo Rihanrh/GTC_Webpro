@@ -8,6 +8,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="tenant.css">
     <link href="sidebars.css" rel="stylesheet">
+    <link rel="stylesheet" href="virtual-select.min.css">
 
     <!-- JS + JS Sidebar -->
     <script src="tenant.js"></script>
@@ -85,6 +86,24 @@
         color: rgba(211, 36, 43, 1) !important;
       }
 
+      #selectMenu{
+        max-width: 100%;
+        width: 500px;
+      }
+
+      .vscomp-toggle-button{
+        padding: 10px 30px 10px 10px;
+        border-radius: 5px;
+      }
+
+      #selectPaymentMethod{
+        max-width: 100%;
+        width: 500px;
+      }
+
+      .vscomp-option.group-title.selected{
+        border:15px solid #D3242B ;
+      }
       
     </style>
 
@@ -132,9 +151,12 @@
 
       <!--Isi Content-->
       <div class="container ms-0" style="height: 100vh;">
+        <a href="#" class ="btn  ms-3 mt-3 mb-2" data-bs-toggle="modal" data-bs-target="#modalTambahPesanan" id ="buttonTambahPesanan" style="background-color: rgba(211, 36, 43, 1); color: white;"><i class="bi bi-plus-circle"></i>      Tambah Pesanan</a>
+
+        
 
         <!--Nav Tab-->
-        <ul class="nav nav-underline nav-fill ms-0" role="tablist">
+        <ul class="nav nav-underline nav-fill ms-3 mb-3" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" id="navSlide" data-bs-toggle="tab" href="#tabPesananMasuk">Pesanan Masuk</a>
           </li>
@@ -372,6 +394,43 @@
           </div>
         </div>
 
+        <!--Modal Tambah Pesanan-->
+        <div class="modal" id="modalTambahPesanan">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+        
+              <div class="modal-header">
+                <h3 class="text-danger">Tambah Pesanan</h3>
+              </div>
+              <!-- Modal body -->
+              <div class="modal-body">
+                <!--Add Pesanan-->
+                <p class="text-danger fs-5">Menu : </p>
+                <select multiple name="native-select" placeholder="Native Select" data-search="false" data-silent-initial-value-set="true" id="selectMenu" >
+                  <option value="1" >Chili Salt Chicken</option>
+                  <option value="2">Bubur Ayam</option>
+                  <option value="3" selected>Batagor</option>
+                  <option value="4" selected>Nasi Goreng</option>
+                  <option value="5" selected>Kwetiau Goreng</option>
+                </select>
+
+                <p class="text-danger fs-5 mt-3">Metode Pembayaran : </p>
+                <select name="native-select" placeholder="Native Select" data-search="false" data-silent-initial-value-set="true" id="selectPaymentMethod">
+                  <option value="1" >QRIS</option>
+                  <option value="2">Tunai</option>
+                </select>
+              </div>
+        
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Pesan</button>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+
 
       </div>
       
@@ -380,8 +439,15 @@
     </main>
       
 
+    <script src="virtual-select.min.js"></script>
     <script>
-
+      // Multi Select untuk tambah menu ke dalam pesanan
+      VirtualSelect.init({ 
+        ele: '#selectMenu' 
+      });
+      VirtualSelect.init({ 
+        ele: '#selectPaymentMethod' 
+      });
     </script>
         
   </body>
